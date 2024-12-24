@@ -37,20 +37,52 @@ const Index = () => {
     <div className="min-h-screen bg-gray-50">
       <Navbar />
       
-      {/* Hero Section */}
+      {/* Hero Section with AI Chat Integration */}
       <div className="bg-secondary py-16 md:py-24">
         <div className="container mx-auto px-4">
-          <div className="max-w-2xl">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Premium Cannabis Products for Your Wellness Journey
-            </h1>
-            <p className="text-lg text-gray-600 mb-8">
-              Discover our curated selection of high-quality cannabis products,
-              designed to enhance your well-being and elevate your lifestyle.
-            </p>
-            <button className="bg-primary hover:bg-primary-hover text-white px-8 py-3 rounded-lg font-medium transition-colors">
-              Shop Now
-            </button>
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="text-left">
+              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                Meet iCanna, Your Personal Cannabis Shopping Assistant
+              </h1>
+              <p className="text-lg text-gray-600 mb-8">
+                Get personalized product recommendations, expert advice, and instant answers
+                to all your cannabis-related questions.
+              </p>
+              <button className="bg-primary hover:bg-primary-hover text-white px-8 py-3 rounded-lg font-medium transition-colors">
+                Start Shopping
+              </button>
+            </div>
+            <div className="bg-white/90 backdrop-blur-sm rounded-xl shadow-xl p-6 space-y-4">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
+                  <span className="text-white font-bold">AI</span>
+                </div>
+                <h2 className="text-xl font-semibold">iCanna Assistant</h2>
+              </div>
+              <div className="space-y-3">
+                <p className="text-gray-600">Hi! I'm iCanna, your personal cannabis shopping assistant. I can help you:</p>
+                <ul className="space-y-2 text-gray-700">
+                  <li className="flex items-center gap-2">
+                    • Find the perfect products for your needs
+                  </li>
+                  <li className="flex items-center gap-2">
+                    • Learn about different strains and effects
+                  </li>
+                  <li className="flex items-center gap-2">
+                    • Get dosage recommendations
+                  </li>
+                  <li className="flex items-center gap-2">
+                    • Understand THC & CBD content
+                  </li>
+                </ul>
+              </div>
+              <div className="pt-4">
+                <button className="w-full bg-primary hover:bg-primary-hover text-white px-6 py-3 rounded-lg font-medium transition-colors flex items-center justify-center gap-2">
+                  Chat with iCanna
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -74,16 +106,16 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
+                title: "AI-Powered Shopping",
+                description: "Get personalized recommendations and instant support from iCanna AI."
+              },
+              {
                 title: "Premium Quality",
                 description: "All products are lab-tested and certified for quality and purity."
               },
               {
-                title: "Expert Support",
-                description: "Our knowledgeable team is here to guide you through your cannabis journey."
-              },
-              {
-                title: "Fast Delivery",
-                description: "Quick and discreet shipping right to your doorstep."
+                title: "Expert Guidance",
+                description: "Access professional advice and educational resources 24/7."
               }
             ].map((benefit, index) => (
               <div key={index} className="text-center">

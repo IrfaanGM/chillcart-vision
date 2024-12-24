@@ -6,7 +6,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Products from "./pages/Products";
-import AiChatButton from "./components/AiChatButton";
 import ConversationStarter from "./components/ConversationStarter";
 
 const queryClient = new QueryClient();
@@ -22,7 +21,6 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/products" element={<Products />} />
         </Routes>
-        <AiChatButton />
         <ConversationStarter />
       </BrowserRouter>
     </TooltipProvider>
